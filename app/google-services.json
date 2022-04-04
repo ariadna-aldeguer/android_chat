@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "849490838356",
+    "firebase_url": "https://xatdam-480f6-default-rtdb.firebaseio.com",
+    "project_id": "xatdam-480f6",
+    "storage_bucket": "xatdam-480f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849490838356:android:8010214fd26c92cd2ffec1",
+        "android_client_info": {
+          "package_name": "com.example.damxat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849490838356-t3na052v2hl9p3n93tva5t88ij2aiibj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXcU8oZ8EmXaxMCgCXR1N1WDLMC7uRTV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849490838356-t3na052v2hl9p3n93tva5t88ij2aiibj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

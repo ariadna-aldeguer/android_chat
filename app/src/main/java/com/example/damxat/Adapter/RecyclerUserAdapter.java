@@ -42,9 +42,9 @@ public class RecyclerUserAdapter extends RecyclerView.Adapter<RecyclerUserAdapte
 
         holder.recUsername.setText(arrayList.get(i).getUsername());
 
-        if(arrayList.get(i).getStatus().equals("online")){
+        if (arrayList.get(i).getStatus().equals("online")){
             holder.onlineOffline.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_online));
-        }else{
+        } else{
             holder.onlineOffline.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_offline));
         }
 

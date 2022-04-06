@@ -5,6 +5,7 @@ public class User {
     String id;
     String username;
     String status;
+    String token;
 
     public User(String id, String username, String status) {
         this.id = id;
@@ -28,5 +29,9 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getToken() {
+        return token;
     }
 }

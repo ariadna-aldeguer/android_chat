@@ -158,8 +158,8 @@ public class XatFragment extends Fragment {
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     // Crea un usuari a partir de la informació actual
                     User user = dataSnapshot.getValue(User.class);
-                    userToken = "fCfslGvqT6CYmG_ubPHGsC:APA91bGGfEVLdHa6i6c8hr-8K3ztS7DtWcSl45BvxhD-n_qvIThLK-5kE3V6lkr-_z9u2kch9CqJKNEKF-ShdydIeMTWVXnpMUanjmGSPvk42PQeLyczl-rXOTdosTy1LM5BhOBMwLlu";
-                            /*user.getToken();*/
+                    //userToken = "fCfslGvqT6CYmG_ubPHGsC:APA91bGGfEVLdHa6i6c8hr-8K3ztS7DtWcSl45BvxhD-n_qvIThLK-5kE3V6lkr-_z9u2kch9CqJKNEKF-ShdydIeMTWVXnpMUanjmGSPvk42PQeLyczl-rXOTdosTy1LM5BhOBMwLlu";
+                    userToken = user.getToken();
                     // Al Main activity, a l'action bar fixa el títol amb l'username de l'usuari.
                     ((MainActivity) getActivity()).getSupportActionBar().setTitle(user.getUsername());
 
@@ -219,7 +219,8 @@ public class XatFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         NotificationModel noti = new NotificationModel("Missatge", msg, "");
-        PushNotification push = new PushNotification("fCfslGvqT6CYmG_ubPHGsC:APA91bGGfEVLdHa6i6c8hr-8K3ztS7DtWcSl45BvxhD-n_qvIThLK-5kE3V6lkr-_z9u2kch9CqJKNEKF-ShdydIeMTWVXnpMUanjmGSPvk42PQeLyczl-rXOTdosTy1LM5BhOBMwLlu", noti);
+        PushNotification push = new PushNotification(userToken, noti);
+        //PushNotification push = new PushNotification("fCfslGvqT6CYmG_ubPHGsC:APA91bGGfEVLdHa6i6c8hr-8K3ztS7DtWcSl45BvxhD-n_qvIThLK-5kE3V6lkr-_z9u2kch9CqJKNEKF-ShdydIeMTWVXnpMUanjmGSPvk42PQeLyczl-rXOTdosTy1LM5BhOBMwLlu", noti);
 
         ApiInterface api = retrofit.create(ApiInterface.class);
         Call<ResponseModel> call = api.postNotification(push);
